@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace QuickBuy.Domain.Entities
 {
-    public class Order
+    public class Order : Entity
     {
         public int Id { get; set; }
         public DateTime OrderData { get; set; }
