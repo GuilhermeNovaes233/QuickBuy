@@ -2,7 +2,7 @@
 
 namespace QuickBuy.Domain.Contracts
 {
-    public interface IOrderRepository : IBaseRepositorio<Order>
+    public interface IOrderRepository : IBaseRepository<Order>
     {
 
     }

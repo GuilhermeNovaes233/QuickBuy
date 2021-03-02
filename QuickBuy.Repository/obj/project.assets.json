@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "QuickBuy.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/QuickBuy.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QuickBuy.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "QuickBuy.Domain/1.0.0": {
+      "type": "project",
+      "path": "../QuickBuy.Domain/QuickBuy.Domain.csproj",
+      "msbuildProject": "../QuickBuy.Domain/QuickBuy.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "QuickBuy.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\guilh\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\guilh\\Desktop\\Projetos\\Dev\\QuickBuy\\QuickBuy.Domain\\QuickBuy.Domain.csproj": {
+              "projectPath": "C:\\Users\\guilh\\Desktop\\Projetos\\Dev\\QuickBuy\\QuickBuy.Domain\\QuickBuy.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
