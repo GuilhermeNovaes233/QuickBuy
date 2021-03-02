@@ -1,6 +1,7 @@
 using QuickBuy.Domain.ValueObject;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace QuickBuy.Domain.Entities
 {
@@ -23,5 +24,19 @@ namespace QuickBuy.Domain.Entities
 
 
         public ICollection<OrderItem> OrderItens { get; set; }
+
+        public override void Validate()
+        {
+            CleanMessagesValidation();
+
+            if (!OrderItens.Any())
+                AddErrorMessage("Error - Pedido não pode ficar sem item de pedido");
+
+            if (string.IsNullOrEmpty(ZipCode))
+                AddErrorMessage("Error - CEP deve estar preenchido");
+
+            if (PaymentMethodId == 0)
+                AddErrorMessage("Error - Não foi informado a forma de pagamento");
+        }
     }
 }
