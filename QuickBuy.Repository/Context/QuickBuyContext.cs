@@ -13,9 +13,9 @@ namespace QuickBuy.Repository.Context
         public DbSet<OrderItem> OrderItens { get; set; }
         public DbSet<PaymentMethod> PaymentMethod { get; set; }
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //Classes de Mapeamento
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new OrderConfiguration());
